@@ -89,7 +89,7 @@ view: users {
   }
 
   dimension: user_dashboard {
-    sql: CONCAT("/dashboards/460?State=", ${TABLE}.STATE) ;;
+    sql: CONCAT("/dashboards/460?State=", ${TABLE}.state) ;;
     tags: ["looker_dashboard_url"]
   }
 
