@@ -83,6 +83,16 @@ view: users {
     map_layer_name: us_zipcode_tabulation_areas
   }
 
+  dimension: user_name {
+    alias: [user.name]
+    sql: ${TABLE}.department ;;
+  }
+
+  dimension: user_dashboard {
+    sql: CONCAT("/dashboards/460?State=", ${TABLE}.STATE) ;;
+    tags: ["looker_dashboard_url"]
+  }
+
   measure: count {
     type: count
     drill_fields: [detail*]
