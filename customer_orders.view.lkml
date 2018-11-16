@@ -1,8 +1,8 @@
 view: customer_orders {
   derived_table: {
     explore_source: orders {
-      column: customer_id { field: order.customer_id }
-      column: lifetime_orders { field: order.lifetime_orders }
+      column: customer_id { field: orders.customer_id }
+      column: lifetime_orders { field: orders.lifetime_orders }
     }
     datagroup_trigger: orders_datagroup
   }
